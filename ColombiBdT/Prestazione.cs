@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ColombiBdT
 {
-    class Prestazione
+    public class Prestazione
     {
         private Zona _zona;
         private string _tipo;
@@ -16,7 +17,18 @@ namespace ColombiBdT
         private DateTime _data;
         private static int nServizi;
         private int idServizio;
+        [JsonConstructor]
+        public Prestazione(Zona zona, string tipo, float nore, Socio richiedente, Socio fornitore, DateTime data, int idservizio)
+        {
+            this.Data = data;
+            this._zona = zona;
+            this._tipo = tipo;
+            this.NOre = nore;
+            this.Richiedente = richiedente;
+            this.Fornitore = fornitore;
+            this.idServizio = idservizio;
 
+        }
         public Zona Zona
         {
             private set

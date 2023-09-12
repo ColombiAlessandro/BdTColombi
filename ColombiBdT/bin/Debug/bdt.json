@@ -3,25 +3,65 @@
     {
       "Segreteria": false,
       "IDSocio": 0,
-      "Telefono": 0,
-      "Nome": null,
-      "Cognome": null,
+      "Telefono": 123,
+      "Nome": "asda",
+      "Cognome": "asdasd",
       "DebitoOre": 0.0
     },
     {
       "Segreteria": false,
-      "IDSocio": 0,
-      "Telefono": 0,
-      "Nome": null,
-      "Cognome": null,
+      "IDSocio": 1,
+      "Telefono": 123,
+      "Nome": "asda",
+      "Cognome": "asdasd",
       "DebitoOre": 0.0
     },
     {
       "Segreteria": true,
-      "IDSocio": 0,
+      "IDSocio": 2,
       "Telefono": 123,
       "Nome": "asd",
-      "Cognome": "123",
+      "Cognome": "asd",
+      "DebitoOre": -12.0
+    },
+    {
+      "Segreteria": false,
+      "IDSocio": 3,
+      "Telefono": 123,
+      "Nome": "asda",
+      "Cognome": "asdasd",
+      "DebitoOre": 0.0
+    },
+    {
+      "Segreteria": true,
+      "IDSocio": 4,
+      "Telefono": 123,
+      "Nome": "asda",
+      "Cognome": "asdasd",
+      "DebitoOre": 0.0
+    },
+    {
+      "Segreteria": true,
+      "IDSocio": 5,
+      "Telefono": 123,
+      "Nome": "asda",
+      "Cognome": "asdasd",
+      "DebitoOre": 0.0
+    },
+    {
+      "Segreteria": true,
+      "IDSocio": 6,
+      "Telefono": 123,
+      "Nome": "asda",
+      "Cognome": "asdasd",
+      "DebitoOre": 0.0
+    },
+    {
+      "Segreteria": true,
+      "IDSocio": 7,
+      "Telefono": 123,
+      "Nome": "asda",
+      "Cognome": "asdasd",
       "DebitoOre": 0.0
     }
   ]

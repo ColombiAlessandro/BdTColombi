@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ColombiBdT
 {
-    class Zona
+    public class Zona
     {
         private static int nZone;
         private int _idZona;

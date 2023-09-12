@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,11 @@ namespace ColombiBdT
         private int idSocio;
         private bool _segreteria;
         
+        public static int NSoci
+        {
+            private set { nSoci = value; }
+            get { return nSoci; }
+        }
         public bool Segreteria
         {
             private set
@@ -29,7 +35,7 @@ namespace ColombiBdT
         }
         public int IDSocio
         {
-            private set
+            set
             {
                 idSocio = value;
             }
@@ -88,7 +94,7 @@ namespace ColombiBdT
             Segreteria = false;
             
         }
-        public Socio(string nome, string cognome, int debitoore, int telefono, bool segreteria)
+        public Socio(string nome, string cognome, float debitoore, int telefono, bool segreteria)
         {
             Nome = nome;
             Cognome = cognome;
@@ -98,6 +104,15 @@ namespace ColombiBdT
             Telefono = telefono;
             Segreteria = segreteria;
             
+        }
+        public Socio(string nome, string cognome, float debitoore, int telefono, bool segreteria, int IDSocio)
+        {
+            Nome = nome;
+            Cognome = cognome;
+            DebitoOre = debitoore;
+            Segreteria = segreteria;
+            Telefono = telefono;
+            idSocio = IDSocio;
         }
         public Socio(string nome, string cognome, int telefono, bool segreteria) : this(nome, cognome, 0, telefono, segreteria)
         {
@@ -131,6 +146,20 @@ namespace ColombiBdT
         public Socio Clone()
         {
             return new Socio(this);
+        }
+        public static void LoadSoci(int i)
+        {
+            if (i >= 0) nSoci = i;
+        }
+        [JsonConstructor]
+        public Socio(bool Segreteria, int IDSocio, string Nome, string Cognome, float DebitoOre, int telefono)
+        {
+            this.Segreteria = Segreteria;
+            this.idSocio = IDSocio;
+            this.Nome = Nome;
+            this.Cognome = Cognome;
+            this.DebitoOre = DebitoOre;
+            this.Telefono = telefono;
         }
     }
 }

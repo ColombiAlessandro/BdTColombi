@@ -1,0 +1,28 @@
+{
+  "ElencoSoci": [
+    {
+      "Segreteria": true,
+      "IDSocio": 0,
+      "Telefono": 123,
+      "Nome": "ao",
+      "Cognome": "ao",
+      "DebitoOre": 0.0
+    },
+    {
+      "Segreteria": true,
+      "IDSocio": 1,
+      "Telefono": 123,
+      "Nome": "ao",
+      "Cognome": "ao",
+      "DebitoOre": 0.0
+    },
+    {
+      "Segreteria": true,
+      "IDSocio": 2,
+      "Telefono": 123,
+      "Nome": "ao",
+      "Cognome": "ao",
+      "DebitoOre": 0.0
+    }
+  ]
+}
