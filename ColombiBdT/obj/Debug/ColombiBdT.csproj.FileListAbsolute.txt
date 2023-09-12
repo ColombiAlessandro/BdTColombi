@@ -27,3 +27,4 @@ C:\Users\aless\Desktop\BdTColombi\ColombiBdT\obj\Debug\ColombiBdT.csproj.CoreCom
 C:\Users\aless\Desktop\BdTColombi\ColombiBdT\obj\Debug\ColombiBdT.csproj.CopyComplete
 C:\Users\aless\Desktop\BdTColombi\ColombiBdT\obj\Debug\ColombiBdT.exe
 C:\Users\aless\Desktop\BdTColombi\ColombiBdT\obj\Debug\ColombiBdT.pdb
+C:\Users\aless\Desktop\BdTColombi\ColombiBdT\obj\Debug\ColombiBdT.PrestazioniView.resources

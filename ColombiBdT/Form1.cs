@@ -24,7 +24,10 @@ namespace ColombiBdT
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            PrestazioniView soci = new PrestazioniView();
+            soci.ShowDialog();
+            this.Close();
         }
 
         private void sociButton_Click(object sender, EventArgs e)
