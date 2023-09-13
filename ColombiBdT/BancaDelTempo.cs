@@ -10,7 +10,7 @@ namespace ColombiBdT
 {
     public class BancaDelTempo
     {
-        Dictionary<Socio, List<Prestazione>> RegistroPrestazioni;
+        public Dictionary<Socio, List<Prestazione>> RegistroPrestazioni;
         public List<Socio> ElencoSoci;
         public BancaDelTempo()
         {

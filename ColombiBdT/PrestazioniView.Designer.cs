@@ -40,6 +40,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.dataBox = new System.Windows.Forms.MonthCalendar();
             this.fornitoreBox = new System.Windows.Forms.ComboBox();
+            this.zonaBox = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.oreBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,12 +56,13 @@
             // 
             // aggiungiButton
             // 
-            this.aggiungiButton.Location = new System.Drawing.Point(665, 205);
+            this.aggiungiButton.Location = new System.Drawing.Point(665, 250);
             this.aggiungiButton.Name = "aggiungiButton";
             this.aggiungiButton.Size = new System.Drawing.Size(227, 43);
             this.aggiungiButton.TabIndex = 1;
             this.aggiungiButton.Text = "Aggiungi";
             this.aggiungiButton.UseVisualStyleBackColor = true;
+            this.aggiungiButton.Click += new System.EventHandler(this.aggiungiButton_Click);
             // 
             // label1
             // 
@@ -79,10 +82,11 @@
             // 
             // destinatarioBox
             // 
+            this.destinatarioBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.destinatarioBox.FormattingEnabled = true;
             this.destinatarioBox.Location = new System.Drawing.Point(385, 36);
             this.destinatarioBox.Name = "destinatarioBox";
-            this.destinatarioBox.Size = new System.Drawing.Size(130, 21);
+            this.destinatarioBox.Size = new System.Drawing.Size(146, 21);
             this.destinatarioBox.TabIndex = 4;
             // 
             // label2
@@ -123,7 +127,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(768, 9);
+            this.label5.Location = new System.Drawing.Point(770, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(30, 13);
             this.label5.TabIndex = 10;
@@ -131,23 +135,44 @@
             // 
             // dataBox
             // 
-            this.dataBox.Location = new System.Drawing.Point(665, 31);
+            this.dataBox.Location = new System.Drawing.Point(665, 37);
+            this.dataBox.MaxSelectionCount = 1;
             this.dataBox.Name = "dataBox";
             this.dataBox.TabIndex = 11;
             // 
             // fornitoreBox
             // 
+            this.fornitoreBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.fornitoreBox.FormattingEnabled = true;
             this.fornitoreBox.Location = new System.Drawing.Point(212, 35);
             this.fornitoreBox.Name = "fornitoreBox";
-            this.fornitoreBox.Size = new System.Drawing.Size(131, 21);
+            this.fornitoreBox.Size = new System.Drawing.Size(144, 21);
             this.fornitoreBox.TabIndex = 12;
+            this.fornitoreBox.SelectedIndexChanged += new System.EventHandler(this.fornitoreBox_SelectedIndexChanged);
+            // 
+            // zonaBox
+            // 
+            this.zonaBox.Location = new System.Drawing.Point(665, 224);
+            this.zonaBox.Name = "zonaBox";
+            this.zonaBox.Size = new System.Drawing.Size(227, 20);
+            this.zonaBox.TabIndex = 13;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(770, 208);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(32, 13);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Zona";
             // 
             // PrestazioniView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(904, 556);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.zonaBox);
             this.Controls.Add(this.fornitoreBox);
             this.Controls.Add(this.dataBox);
             this.Controls.Add(this.label5);
@@ -162,6 +187,7 @@
             this.Controls.Add(this.listView1);
             this.Name = "PrestazioniView";
             this.Text = "PrestazioniView";
+            this.Load += new System.EventHandler(this.PrestazioniView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.oreBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -181,6 +207,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.MonthCalendar dataBox;
-        private System.Windows.Forms.ComboBox fornitoreBox;
+        internal System.Windows.Forms.ComboBox fornitoreBox;
+        private System.Windows.Forms.TextBox zonaBox;
+        private System.Windows.Forms.Label label6;
     }
 }

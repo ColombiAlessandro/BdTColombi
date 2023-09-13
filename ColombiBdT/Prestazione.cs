@@ -9,7 +9,7 @@ namespace ColombiBdT
 {
     public class Prestazione
     {
-        private Zona _zona;
+        private string _zona;
         private string _tipo;
         private float _nOre;
         private Socio _richiedente;
@@ -18,7 +18,7 @@ namespace ColombiBdT
         private static int nServizi;
         private int idServizio;
         [JsonConstructor]
-        public Prestazione(Zona zona, string tipo, float nore, Socio richiedente, Socio fornitore, DateTime data, int idservizio)
+        public Prestazione(string zona, string tipo, float nore, Socio richiedente, Socio fornitore, DateTime data, int idservizio)
         {
             this.Data = data;
             this._zona = zona;
@@ -29,7 +29,7 @@ namespace ColombiBdT
             this.idServizio = idservizio;
 
         }
-        public Zona Zona
+        public string Zona
         {
             private set
             {
@@ -95,7 +95,7 @@ namespace ColombiBdT
                 return _data;
             }
         }
-        public Prestazione(Socio richiedente, Socio fornitore, DateTime data, float nOre, Zona zona)
+        public Prestazione(Socio richiedente, Socio fornitore, DateTime data, float nOre, string zona)
         {
             Richiedente = richiedente;
             Fornitore = fornitore;
