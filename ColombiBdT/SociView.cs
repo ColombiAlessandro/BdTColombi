@@ -69,13 +69,17 @@ namespace ColombiBdT
         {
             if(!String.IsNullOrEmpty(nomeBox.Text) && !String.IsNullOrEmpty(cognomeBox.Text) && !String.IsNullOrEmpty(numeroBox.Text) && !String.IsNullOrEmpty(nomeBox.Text))
             {
-                int x=0;
+                long x=0;
                 try
                 {
-                  x=int.Parse(numeroBox.Text);
+                  x=long.Parse(numeroBox.Text);
                 } catch (Exception ex)
                 {
                     MessageBox.Show("Numero di telefono non valido");
+                    nomeBox.Text = "";
+                    cognomeBox.Text = "";
+                    numeroBox.Text = "";
+                    return;
                 }
                 bdt.aggiungiSocio(nomeBox.Text, cognomeBox.Text, x, segreteria.Checked);
                 bdt.Scrivi();
@@ -101,10 +105,10 @@ namespace ColombiBdT
                 v = listView1.SelectedIndices[0];
                 if (!string.IsNullOrEmpty(modificaNome.Text) && !string.IsNullOrEmpty(modificaCognome.Text) && !string.IsNullOrEmpty(modificaTelefono.Text) && !string.IsNullOrEmpty(modificaDebito.Text))
                 {
-                    int x = 0;
+                    long x = 0;
                     try
                     {
-                        x = int.Parse(modificaTelefono.Text);
+                        x = long.Parse(modificaTelefono.Text);
                     }
                     catch (Exception ex)
                     {

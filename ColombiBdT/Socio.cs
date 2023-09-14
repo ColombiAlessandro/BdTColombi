@@ -11,7 +11,7 @@ namespace ColombiBdT
     {
         private string _nome;
         private string _cognome;
-        private int _telefono;
+        private long _telefono;
         private float _debitoOre;
         private static int nSoci;
         private int idSocio;
@@ -44,7 +44,7 @@ namespace ColombiBdT
                 return idSocio;
             }
         }
-        public int Telefono
+        public long Telefono
         {
             private set
             {
@@ -94,7 +94,7 @@ namespace ColombiBdT
             Segreteria = false;
             
         }
-        public Socio(string nome, string cognome, float debitoore, int telefono, bool segreteria)
+        public Socio(string nome, string cognome, float debitoore, long telefono, bool segreteria)
         {
             Nome = nome;
             Cognome = cognome;
@@ -105,7 +105,7 @@ namespace ColombiBdT
             Segreteria = segreteria;
             
         }
-        public Socio(string nome, string cognome, float debitoore, int telefono, bool segreteria, int IDSocio)
+        public Socio(string nome, string cognome, float debitoore, long telefono, bool segreteria, int IDSocio)
         {
             Nome = nome;
             Cognome = cognome;
@@ -114,7 +114,7 @@ namespace ColombiBdT
             Telefono = telefono;
             idSocio = IDSocio;
         }
-        public Socio(string nome, string cognome, int telefono, bool segreteria) : this(nome, cognome, 0, telefono, segreteria)
+        public Socio(string nome, string cognome, long telefono, bool segreteria) : this(nome, cognome, 0, telefono, segreteria)
         {
             
         } 
@@ -129,7 +129,7 @@ namespace ColombiBdT
         }
         public void modificaDebito(float orePrestazioni)
         {
-            if(DebitoOre-orePrestazioni < -25)
+            if(DebitoOre+orePrestazioni < -25)
             {
                 throw new Exception("Non è possibile scendere sotto le 25 ore di debito");
             }
@@ -152,7 +152,7 @@ namespace ColombiBdT
             if (i >= 0) nSoci = i;
         }
         [JsonConstructor]
-        public Socio(bool Segreteria, int IDSocio, string Nome, string Cognome, float DebitoOre, int telefono)
+        public Socio(bool Segreteria, int IDSocio, string Nome, string Cognome, float DebitoOre, long telefono)
         {
             this.Segreteria = Segreteria;
             this.idSocio = IDSocio;

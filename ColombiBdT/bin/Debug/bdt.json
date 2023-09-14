@@ -1,67 +1,28 @@
 {
+  "RegistroPrestazioni": [],
   "ElencoSoci": [
     {
-      "Segreteria": false,
+      "Segreteria": true,
       "IDSocio": 0,
-      "Telefono": 123,
-      "Nome": "asda",
-      "Cognome": "asdasd",
+      "Telefono": 3913128968,
+      "Nome": "Alessandro",
+      "Cognome": "Colombi",
       "DebitoOre": 0.0
     },
     {
       "Segreteria": false,
       "IDSocio": 1,
-      "Telefono": 123,
-      "Nome": "asda",
-      "Cognome": "asdasd",
+      "Telefono": 1231232133,
+      "Nome": "Edoardo Mario",
+      "Cognome": "Callioni",
       "DebitoOre": 0.0
     },
     {
       "Segreteria": true,
       "IDSocio": 2,
-      "Telefono": 123,
-      "Nome": "asd",
-      "Cognome": "asd",
-      "DebitoOre": -12.0
-    },
-    {
-      "Segreteria": false,
-      "IDSocio": 3,
-      "Telefono": 123,
-      "Nome": "asda",
-      "Cognome": "asdasd",
-      "DebitoOre": 0.0
-    },
-    {
-      "Segreteria": true,
-      "IDSocio": 4,
-      "Telefono": 123,
-      "Nome": "asda",
-      "Cognome": "asdasd",
-      "DebitoOre": 0.0
-    },
-    {
-      "Segreteria": true,
-      "IDSocio": 5,
-      "Telefono": 123,
-      "Nome": "asda",
-      "Cognome": "asdasd",
-      "DebitoOre": 0.0
-    },
-    {
-      "Segreteria": true,
-      "IDSocio": 6,
-      "Telefono": 123,
-      "Nome": "asda",
-      "Cognome": "asdasd",
-      "DebitoOre": 0.0
-    },
-    {
-      "Segreteria": true,
-      "IDSocio": 7,
-      "Telefono": 123,
-      "Nome": "asda",
-      "Cognome": "asdasd",
+      "Telefono": 1232131233,
+      "Nome": "Andrea",
+      "Cognome": "Pini",
       "DebitoOre": 0.0
     }
   ]

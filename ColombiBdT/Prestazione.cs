@@ -7,27 +7,45 @@ using System.Threading.Tasks;
 
 namespace ColombiBdT
 {
-    public class Prestazione
+    public class Prestazione : IComparable<object>
     {
         private string _zona;
         private string _tipo;
         private float _nOre;
-        private Socio _richiedente;
-        private Socio _fornitore;
-        private DateTime _data;
+        private int _richiedente;
+        private int _fornitore;
+        private string _data;
         private static int nServizi;
         private int idServizio;
         [JsonConstructor]
-        public Prestazione(string zona, string tipo, float nore, Socio richiedente, Socio fornitore, DateTime data, int idservizio)
+        public Prestazione(string zona, string tipo, float nore, int idrichiedente, int idfornitore, string data, int idservizio)
         {
             this.Data = data;
             this._zona = zona;
             this._tipo = tipo;
             this.NOre = nore;
-            this.Richiedente = richiedente;
-            this.Fornitore = fornitore;
+            this.IDRichiedente = idrichiedente;
+            this.IDFornitore = idfornitore;
             this.idServizio = idservizio;
 
+
+        }
+        public static void loadServizi(int nservizi)
+        {
+            if(nservizi>=0)
+            {
+                nServizi = nservizi;
+            }
+        }
+        public int IDServizio
+        {
+            get { return idServizio; }
+            set { idServizio = value; }
+        }
+        public static int NServizi
+        {
+            get { return nServizi; }
+            private set { nServizi = value; }
         }
         public string Zona
         {
@@ -62,7 +80,7 @@ namespace ColombiBdT
                 return _nOre;
             }
         }
-        public Socio Richiedente
+        public int IDRichiedente
         {
             private set
             {
@@ -73,7 +91,7 @@ namespace ColombiBdT
                 return _richiedente;
             }
         }
-        public Socio Fornitore
+        public int IDFornitore
         {
             private set
             {
@@ -84,7 +102,7 @@ namespace ColombiBdT
                 return _fornitore;
             }
         }
-        public DateTime Data
+        public string Data
         {
             private set
             {
@@ -95,17 +113,18 @@ namespace ColombiBdT
                 return _data;
             }
         }
-        public Prestazione(Socio richiedente, Socio fornitore, DateTime data, float nOre, string zona)
+        public Prestazione(int idrichiedente, int idfornitore, string data, float nOre, string zona, string tipo)
         {
-            Richiedente = richiedente;
-            Fornitore = fornitore;
+            IDRichiedente = idrichiedente;
+            IDFornitore = idfornitore;
             Data = data;
             NOre = nOre;
             Zona = zona;
+            Tipo = tipo;
             idServizio = nServizi;
             nServizi++;
         }
-        public Prestazione() : this(null, null, DateTime.Now, 0, null)
+        public Prestazione() : this(0, 0, DateTime.Now.ToString(), 0, "", "")
         {
 
         }
@@ -116,6 +135,13 @@ namespace ColombiBdT
         public override int GetHashCode()
         {
             return this.idServizio;
+        }
+        public int CompareTo(object obj)
+        {
+            Prestazione p=obj as Prestazione;
+            if (this.NOre > p.NOre) return 1;
+            if(this.NOre < p.NOre) return -1;
+            return 0;
         }
     }
 }
